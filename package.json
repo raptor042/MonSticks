@@ -5,13 +5,17 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index",
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "better-sqlite3": "^11.1.2",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-ws": "^5.0.2",
-    "telegraf": "^4.16.3"
+    "short-uuid": "^5.2.0",
+    "telegraf": "^4.16.3",
+    "ws": "^8.18.0"
   }
 }

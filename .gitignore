@@ -1,6 +1,8 @@
 node_modules/
+node_modules
 database.db
 nodemon.json
 .mypy_cache/
 security
 deploy.sh
+.env

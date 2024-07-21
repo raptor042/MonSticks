@@ -1,9 +1,13 @@
 import { Telegraf } from "telegraf";
 import { addUser, getUser } from "./database.js";
 import shortUUID from "short-uuid"
+import { botToken } from "./constants.js";
+import { configDotenv } from "dotenv";
 
-const webAppUrl = "https://192.168.47.230:5173/"
+configDotenv()
 
+const webAppUrl = process.env.WEB_APP_URL // "https://192.168.47.230:5173/"
+// console.log(webAppUrl)
 
 const welcomeMsg = `Hey, @username! Welcome to TapSwap!
 Tap on the coin and see your balance rise.
@@ -16,7 +20,7 @@ More buddies, more coins.`
 
 
 
-export const bot = new Telegraf("6941099112:AAGCUkBlH9va_Pbq1KX_F-5JH77RmDwKEaI")
+export const bot = new Telegraf(botToken)
 
 bot.start((ctx) => {
   const username  = ctx.chat.username
