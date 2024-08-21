@@ -24,11 +24,11 @@ const users = {}
 
 app.get('/', (req, res) => {
     res.send("Cool");
-  });
+});
 
 
 
-  app.get("/stats", (req, res) => {
+app.get("/stats", (req, res) => {
     const stats = getUsersStats()
     const onlineUsers = expressWs.getWss().clients.size  
     // console.log(onlineUsers)
@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
     res.send({...stats, onlineUsers, dailyUsers})
         
-  })
+})
 
 
 

@@ -1,5 +1,3 @@
-
-
 const boosters = [
     {
         name : "Multitap",
@@ -14,8 +12,6 @@ const boosters = [
     {
         name : "Tap Bot"
     }
-
-
 ]
 
 const dailyBoosters = [
